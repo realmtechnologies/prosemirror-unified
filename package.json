@@ -19,6 +19,12 @@
   },
   "main": "dist/prosemirror-unified.cjs",
   "module": "dist/prosemirror-unified.js",
+  "exports": {
+    ".": {
+      "import": "./dist/prosemirror-unified.js",
+      "require": "./dist/prosemirror-unified.cjs"
+    }
+  },
   "types": "dist/prosemirror-unified.d.ts",
   "sideEffects": false,
   "files": [
