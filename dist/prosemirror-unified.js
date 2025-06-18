@@ -1,5 +1,5 @@
 import { InputRule, inputRules } from "prosemirror-inputrules";
-import { TextSelection, SelectionRange } from "prosemirror-state";
+import { SelectionRange } from "prosemirror-state";
 import { baseKeymap, chainCommands } from "prosemirror-commands";
 import { keymap } from "prosemirror-keymap";
 import { Schema } from "prosemirror-model";
@@ -67,9 +67,6 @@ class MarkInputRule extends InputRule {
   }
   markHandler(state, match, start, end) {
     var _a;
-    if (!(state.selection instanceof TextSelection)) {
-      return null;
-    }
     const $start = state.doc.resolve(start);
     const $end = state.doc.resolve(end);
     const range = [new SelectionRange($start, $end)];

@@ -69,9 +69,6 @@ class MarkInputRule extends prosemirrorInputrules.InputRule {
   }
   markHandler(state, match, start, end) {
     var _a;
-    if (!(state.selection instanceof prosemirrorState.TextSelection)) {
-      return null;
-    }
     const $start = state.doc.resolve(start);
     const $end = state.doc.resolve(end);
     const range = [new prosemirrorState.SelectionRange($start, $end)];

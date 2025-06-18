@@ -27,7 +27,6 @@
       "require": "./dist/prosemirror-unified.cjs"
     }
   },
-  "types": "dist/prosemirror-unified.d.ts",
   "sideEffects": false,
   "files": [
     "dist",
