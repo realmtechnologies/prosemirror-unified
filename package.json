@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-unified",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "ProseMirror Unified integration",
   "keywords": [
     "prosemirror",
@@ -39,6 +39,7 @@
     "clean": "rimraf dist/* types/*",
     "prebuild": "npm run clean",
     "build": "vite build",
+    "start": "vite build --watch",
     "lint:typecheck": "tsc --noEmit",
     "lint:eslint": "eslint --color \"src/**/*.ts\" \"tests/**/*.ts\" \"*.config.{js,ts}\"",
     "lint": "run-p -c --aggregate-output lint:*",
@@ -77,6 +78,6 @@
     "vite": "^6.0.7",
     "vite-plugin-dts": "^4.5.0",
     "vitest": "^3.0.4",
-    "vitest-prosemirror": "^0.1.2"
+    "vitest-prosemirror": "^0.3.0"
   }
 }
